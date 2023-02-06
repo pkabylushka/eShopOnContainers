@@ -1,5 +1,5 @@
 variables:
-    registryEndpoint: eshop-registry
+    registryEndpoint: '7e735a2d-ed65-4713-b61d-726e502ee6be'
 trigger:
   branches:
     include:
@@ -20,8 +20,8 @@ jobs:
     registryEndpoint: $(registryEndpoint)
     helmfrom: $(Build.SourcesDirectory)/deploy/k8s/helm
     helmto: $(Build.ArtifactStagingDirectory)/deploy/k8s/helm
-- template: ../multiarch.yaml
-  parameters:
-    image: catalog.api
-    branch: $(Build.SourceBranchName)
-    registryEndpoint: $(registryEndpoint)
+# - template: ../multiarch.yaml
+#   parameters:
+#     image: catalog.api
+#     branch: $(Build.SourceBranchName)
+#     registryEndpoint: $(registryEndpoint)
