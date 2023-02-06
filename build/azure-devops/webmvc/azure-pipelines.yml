@@ -1,5 +1,5 @@
 variables:
-    registryEndpoint: eshopkabp.azurecr.io
+    registryEndpoint: eshopkabp
 trigger:
   branches:
     include:
